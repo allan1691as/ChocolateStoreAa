@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;/*para manipular las alturas y anchos(width heigth) sin contar paddin ni margin*/
+/*  background: rgb(52, 8, 8); color chocolate*/
+/**/
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    width: 800px;
+    height: 500px;
+    margin: 5% 15%;
+    display:flex;
+     justify-content: center;
+    flex-direction: column;
+    position:relative;
+  }
+.barchocolate{
+ background:brown;
+ width:700px;
+ height:380px;
+ margin:5% 15%;
+ display: flex; 
+ justify-content: center; 
+ align-items: center;
+ border-radius: 16px;
+ position:relative;
+}
+.titlechoco{
+position:relative;
+ font-size: 3em;
+ color: #fff;
+ display: flex;
+ align-items: center;
+ flex-direction:column;
+ position: relative;
+ margin:5% 0;
+ width: 500px;
+ height: 100px;
+ }
+p.letrauno::first-letter{
+    color:rgb(53, 27, 27);
+    font-family: 'Nunito';
+    position: relative;
+     }
+    .barpuddle{
+        margin:-3% 1%;
+        width:410px;
+        height:7px;
+        border:8px;
+        background:rgb(52,8,8);
+       position: relative;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       }
+ .barpuddle span{ 
+    width:25px;
+    border-radius: 50%;
+    height:12px;
+    background:rgb(52, 8, 8);
+    animation-name:bubblefall;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration:3s;
+    z-index: 3;
+}     
+@keyframes bubblefall{
+    0%{
+        width:40px;
+        height:12px;
+        animation-duration:1s;
+    }
+    25%{
+        width:10px;
+        height:10px;
+        animation-duration:1s;
+    }
+    50%{
+        width:10px;
+        height:10px;
+        animation-duration:1s;
+        transform: translateY(290px);
+    }
+    75%{  width:10px;
+        height:10px;
+        animation-duration:0.05s;
+        opacity:0;
+        transform: translateY(290);}
+    100%{
+        width:10px;
+        height:10px;
+        animation-duration:0.05s;
+        transform: translateY(290px);
+        opacity: 0;
+    }
+} 
+.barpuddle div{
+    width:10px;
+    border-radius: 50%;
+    height:15px;
+    background:rgb(52, 8, 8);
+    animation-name: burb;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration:3s;
+    
+  }
+  @keyframes burb{
+    0%{width:25px;height:10px;
+    animation-duration:2s;
+    }
+    50%{width:30px;height:10px; transform: translateX(-20px);
+        animation-duration:3s;}
+       100%{width:15px;height:10px;
+        animation-duration:1s;} 
+    
+  }       
+.puddle{
+    background: rgb(52, 8, 8);
+    width:300px;
+    height:100px;
+    border-radius: 50%;
+   margin:0% 35%;
+    transform-style:preserve-3d;
+transform:perspective(500px) rotateX(35deg);
+}
+#tpuddle{
+    color: #fff;
+    margin: 5% 40%;
+    font-size: 2.1em;
+    transform-style:preserve-3d;
+transform:perspective(500px) rotateX(180deg);
+}
+.puddle::before{
+    content: '';
+    position: absolute;
+    background: rgb(52, 8, 8);
+    width:100px;
+    height:40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    }
+
+    .puddle::after{
+        content: '';
+        position: absolute;
+        background:rgb(52, 8, 8);
+        width:100px;
+        height:40px;
+        border-radius: 50%;
+        margin:-15px 50%;
+        }
+    
+@media(max-width:800px){
+.header{
+    margin:0 8%;
+    width:100%;
+    height: 350px;
+ }
+ 
+.barchocolate{
+    margin: 15% 0;
+    background:brown;
+    width:300px;
+    height:180px;
+    margin:0 auto;
+   }
+   
+.titlechoco{
+    margin:5% 0;   
+    position:relative;
+     font-size:1.5em;
+     width: 400px;
+     height: 100px;
+     }
+     
+    .barpuddle{
+        width:280px;
+        height:8px;
+     }
+          
+@keyframes bubblefall{
+    0%{
+        width:40px;
+        height:12px;
+        animation-duration:1s;
+    }
+    25%{
+        width:10px;
+        height:10px;
+        animation-duration:1s;
+    }
+    50%{
+        width:10px;
+        height:10px;
+        animation-duration:1s;
+        transform: translateY(150px);
+    }
+    75%{  width:10px;
+        height:10px;
+        animation-duration:0.05s;
+        opacity:0;
+        transform: translateY(150);}
+    100%{
+        width:10px;
+        height:10px;
+        animation-duration:0.05s;
+        transform: translateY(150px);
+        opacity: 0;
+    }
+} 
+     .puddle{
+        width:200px;
+        height:80px;
+        border-radius: 50%;
+       margin:7% 5%;
+    }
+    
+#tpuddle{
+    color: #fff;
+    margin: 5% 40%;
+    font-size: 2.1em;
+    transform-style:preserve-3d;
+transform:perspective(500px) rotateZ(200deg);
+}
+}
+    
+      
